@@ -1,0 +1,1 @@
+This project contains the interface of a Prime Video application developed using Kotlin in Android Studio. The app utilizes the Navigation Component technology to provide a smooth and user-friendly navigation experience.
