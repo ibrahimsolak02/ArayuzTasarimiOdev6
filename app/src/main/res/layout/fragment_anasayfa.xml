@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:backgroundTint="@color/black"
+    tools:context=".ui.fragment.AnasayfaFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFilmler">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/AnasayfaRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/allerta_stencil"
+                    android:text="Prime "
+                    android:textColor="@color/kullanici_resim_renk"
+                    android:textColorHint="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="- Filmler>"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/AnasayfaRv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/allerta_stencil"
+                    android:text="Prime "
+                    android:textColor="@color/kullanici_resim_renk"
+                    android:textColorHint="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="- Diziler>"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/AnasayfaRv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/buttonTumu"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/allerta_stencil"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:text="Tümü"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:chipBackgroundColor="@color/black"
+        app:chipCornerRadius="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFilmler"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarAnasayfa" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/buttonDiziler"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/allerta_stencil"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:text="Diziler"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:chipBackgroundColor="@color/black"
+        app:chipCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/buttonFilmler"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarAnasayfa" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/buttonFilmler"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/allerta_stencil"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:text="Filmler"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:chipBackgroundColor="@color/black"
+        app:chipCornerRadius="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDiziler"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/buttonTumu"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarAnasayfa" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAnasayfa"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:background="@color/black"
+            android:scaleType="fitCenter"
+            android:src="@drawable/kullanici_resim"
+            app:tint="@color/kullanici_resim_renk"
+            tools:layout_editor_absoluteX="369dp"
+            tools:layout_editor_absoluteY="20dp" />
+
+        <ImageButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:background="@color/black"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tv_resim"
+            app:tint="@color/buttonIndir"
+            tools:layout_editor_absoluteX="369dp"
+            tools:layout_editor_absoluteY="20dp" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:background="@color/black"
+            android:scaleType="fitCenter"
+            android:src="@drawable/prime"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="21dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
